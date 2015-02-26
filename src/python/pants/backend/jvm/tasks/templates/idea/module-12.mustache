@@ -31,6 +31,7 @@ Licensed under the Apache License, Version 2.0 (see LICENSE).
     <exclude-output/>
 
     <content url="file://{{module.root_dir}}">
+      <sourceFolder url="file://{{module.root_dir}}/.pants.d/gen/annotations" isTestSource="false"/>
     {{#module.content_roots}}
       {{#sources}}
         {{#package_prefix}}

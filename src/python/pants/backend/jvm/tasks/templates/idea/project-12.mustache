@@ -15,7 +15,15 @@ Licensed under the Apache License, Version 2.0 (see LICENSE).
       <entry name="?*{{.}}"/>
       {{/project.resource_extensions}}
     </wildcardResourcePatterns>
-    <annotationProcessing enabled="false" useClasspath="true"/>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true">
+        <sourceOutputDir name=".pants.d/gen/annotations" />
+        <sourceTestOutputDir name=".pants.d/gen/annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+    </annotationProcessing>
+
   </component>
 
   <component name="JavacSettings">
